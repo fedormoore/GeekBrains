@@ -24,18 +24,10 @@ public class task2 {
             inputWord = scanner.nextLine();
 
             for (int i = 0; i < inputWord.length(); i++) {
-                boolean search = false;
-                for (int x = 0; x < words.length; x++) {
-                    if (i + 1 > words[x].length()) {
-                        continue;
-                    }
-                    if (inputWord.charAt(i) == words[x].charAt(i)) {
-                        search = true;
-                        break;
-                    }
+                if (i + 1 > words[secretWord].length()) {
+                    continue;
                 }
-
-                if (search) {
+                if (inputWord.charAt(i) == words[secretWord].charAt(i)) {
                     outputWord += String.valueOf(inputWord.charAt(i));
                 } else {
                     outputWord += "#";

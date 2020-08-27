@@ -36,12 +36,19 @@ public class task1 {
                 countAtt++;
             }
 
-            if (countAtt==3){
+            if (countAtt == 3) {
                 System.out.println("К сожалению вы проиграли.");
             }
 
             System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
-            if (scanner.nextInt()==0){
+            int answer = scanner.nextInt();
+
+            while (answer != 0 && answer != 1) {
+                System.out.println("Введите 1 или 0! 1 – да / 0 – нет");
+                answer = scanner.nextInt();
+            }
+
+            if (answer == 0) {
                 again = false;
             }
         }
