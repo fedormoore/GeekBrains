@@ -19,16 +19,16 @@ public class Task1 {
         getPerson(persArr);
     }
 
-    public static void setPerson(Person[] persArr){
+    public static void setPerson(Person[] persArr) {
         for (int i = 0; i < 5; i++) {
             persArr[i] = new Person(name[random.nextInt(name.length)], lastName[random.nextInt(lastName.length)], surName[random.nextInt(surName.length)], position[random.nextInt(position.length)], email[random.nextInt(email.length)], telNumber[random.nextInt(telNumber.length)], random.nextInt(100000), random.nextInt(85));
         }
     }
 
-    public static void getPerson(Person[] persArr){
-        for (int i = 0; i < 5; i++) {
-            if (persArr[i].age>40){
-                persArr[i].printPerson();
+    public static void getPerson(Person[] persArr) {
+        for (Person p : persArr) {
+            if (p.getAge() > 40) {
+                p.printPerson();
             }
         }
     }
