@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e269ffe7-4f1c-4664-b2e3-3c0374159d89" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hPllWlFVaFo8die5rMrPDyLxBi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../itdrive/Part_2/HomeWorks_1_11_1" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.moore.Task1" />
+      <module name="Lesson8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e269ffe7-4f1c-4664-b2e3-3c0374159d89" name="Default Changelist" comment="" />
+      <created>1599920759933</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599920759933</updated>
+      <workItem from="1599920763951" duration="13551000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599921179479">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="294" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599921179479" />
+    <state x="645" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1599922345092">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="645" y="211" key="#com.intellij.ide.util.MemberChooser/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599922345092" />
+    <state x="569" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1599921178082">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="569" y="295" key="#com.intellij.ide.util.TreeClassChooserDialog/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599921178082" />
+    <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1599926660011">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="260" key="FileChooserDialogImpl/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599926660011" />
+    <state width="1637" height="237" key="GridCell.Tab.0.bottom" timestamp="1599935769762">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="237" key="GridCell.Tab.0.bottom/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599935769762" />
+    <state width="1637" height="237" key="GridCell.Tab.0.center" timestamp="1599935769762">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="237" key="GridCell.Tab.0.center/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599935769762" />
+    <state width="1637" height="237" key="GridCell.Tab.0.left" timestamp="1599935769762">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="237" key="GridCell.Tab.0.left/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599935769762" />
+    <state width="1637" height="237" key="GridCell.Tab.0.right" timestamp="1599935769762">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="237" key="GridCell.Tab.0.right/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599935769762" />
+    <state width="1637" height="237" key="GridCell.Tab.1.bottom" timestamp="1599935769763">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="237" key="GridCell.Tab.1.bottom/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599935769763" />
+    <state width="1637" height="237" key="GridCell.Tab.1.center" timestamp="1599935769762">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="237" key="GridCell.Tab.1.center/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599935769762" />
+    <state width="1637" height="237" key="GridCell.Tab.1.left" timestamp="1599935769762">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="237" key="GridCell.Tab.1.left/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599935769762" />
+    <state width="1637" height="237" key="GridCell.Tab.1.right" timestamp="1599935769762">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="237" key="GridCell.Tab.1.right/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599935769762" />
+    <state x="370" y="160" key="Maven.ArtifactSearchDialog" timestamp="1599930693883">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="370" y="160" key="Maven.ArtifactSearchDialog/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599930693883" />
+    <state x="1680" y="0" width="1442" height="697" maximized="true" key="dock-window-1" timestamp="1599930097555">
+      <screen x="1680" y="0" width="1600" height="860" />
+    </state>
+    <state x="1680" y="0" width="1442" height="697" maximized="true" key="dock-window-1/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599930097555" />
+    <state x="1680" y="0" width="1442" height="823" maximized="true" key="dock-window-2" timestamp="1599929061262">
+      <screen x="1680" y="0" width="1600" height="860" />
+    </state>
+    <state x="1680" y="0" width="1442" height="823" maximized="true" key="dock-window-2/1680.0.1600.860/0.0.1680.1010@0.0.1680.1010" timestamp="1599929061262" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lesson8$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1599924826317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
