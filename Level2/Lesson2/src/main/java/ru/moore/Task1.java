@@ -2,7 +2,7 @@ package ru.moore;
 
 public class Task1 {
 
-    public static final int MAX_ARRAY_LENGTH = 5;
+    public static final int MAX_ARRAY_LENGTH = 4;
 
     public static void main(String[] args) {
         String[][] myArray1 = new String[4][4];
@@ -16,13 +16,22 @@ public class Task1 {
         try {
             setArray(myArray1);
         } catch (MyArraySizeException e) {
-            System.out.println("Массив привышает доступистимый размер!");
+            e.printStackTrace();
         } catch (MyArrayDataException e) {
-            System.out.println("В ячейки " + e.getI() + "-" + e.getJ() +" тип данных char вместо int!");
+            e.printStackTrace();
         }
     }
 
-    public static void setArray(String[][] array) {
+    public static void setArray(String[][] array) throws MyArraySizeException, MyArrayDataException{
+        if (array.length != MAX_ARRAY_LENGTH) {
+            throw new MyArraySizeException();
+        }
+        for (String[] row : array) {
+            if (row.length != MAX_ARRAY_LENGTH) {
+                throw new MyArraySizeException();
+            }
+        }
+
         try {
             String verificationArrayLength = array[MAX_ARRAY_LENGTH - 1][MAX_ARRAY_LENGTH - 1];
 

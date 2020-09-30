@@ -6,15 +6,7 @@ public class MyArrayDataException extends RuntimeException{
     private int j;
 
     public MyArrayDataException(int i, int j){
-        this.i = i;
-        this.j = j;
+        super("В ячейки " + i + "-" + j +" тип данных char вместо int!");
     }
 
-    public int getI() {
-        return i;
-    }
-
-    public int getJ() {
-        return j;
-    }
 }
