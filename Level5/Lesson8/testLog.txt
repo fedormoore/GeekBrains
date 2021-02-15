@@ -1,0 +1,8 @@
+2021-02-15 17:26:52 ERROR AuthDialogController:84 - Неверный логин или пароль!
+2021-02-15 17:35:11 ERROR StorageProvider:100 - java.nio.file.NoSuchFileException: C:\Users\Федор\Desktop\GeekBrains\Level5\Lesson8\server\userDir\1
+2021-02-15 17:35:19 ERROR StorageProvider:51 - java.nio.file.NoSuchFileException: C:\Users\Федор\Desktop\GeekBrains\Level5\Lesson8\server\userDir\1
+2021-02-15 17:36:04 ERROR RegDialogController:57 - Логин занят!
+2021-02-15 17:39:32 ERROR Network:74 - java.nio.channels.ClosedChannelException
+2021-02-15 17:52:24 ERROR StorageProvider:72 - java.nio.file.DirectoryNotEmptyException: C:\Users\Федор\Desktop\GeekBrains\Level5\Lesson8\server\userDir\Имя\папка1\папка2
+2021-02-15 17:52:27 ERROR StorageProvider:72 - java.nio.file.DirectoryNotEmptyException: C:\Users\Федор\Desktop\GeekBrains\Level5\Lesson8\server\userDir\Имя\папка1\папка2
+2021-02-15 17:54:56 ERROR StorageProvider:72 - java.nio.file.DirectoryNotEmptyException: C:\Users\Федор\Desktop\GeekBrains\Level5\Lesson8\server\userDir\1\1\2
