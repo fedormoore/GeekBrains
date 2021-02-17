@@ -6,6 +6,7 @@ import ru.moore.lesson2.repositories.ProductRepository;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Component
@@ -57,7 +58,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     @Override
     public List<Product> findAll() {
-        return products;
+        return Collections.unmodifiableList(products);
     }
 
     @Override
