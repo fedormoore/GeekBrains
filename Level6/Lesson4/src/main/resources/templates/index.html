@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -12,34 +12,39 @@
 
     <h1 th:text="${average}"/>
 
-    <h1>Список продуктов</h1>
-    <span th:if="${products.isEmpty()}">Продуктов нет</span>
+    <h1>РЎРїРёСЃРѕРє РїСЂРѕРґСѓРєС‚РѕРІ</h1>
+    <span th:if="${products.isEmpty()}">РџСЂРѕРґСѓРєС‚РѕРІ РЅРµС‚</span>
     <table class="table" th:if="${!products.isEmpty()}">
         <thead>
         <tr>
             <td>ID</td>
-            <td>Наименование</td>
-            <td>Цена</td>
-            <td>Действия</td>
+            <td>РќР°РёРјРµРЅРѕРІР°РЅРёРµ</td>
+            <td>Р¦РµРЅР°</td>
+            <td>Р”РµР№СЃС‚РІРёСЏ</td>
         </tr>
         </thead>
         <tbody>
         <tr th:each="p : ${products}">
             <td th:text="${p.id}"/>
-            <td> th:text="${p.title}"/>
+            <td th:text="${p.title}"/>
             <td th:text="${p.cost}"/>
             <td>
-                <a class="btn btn-danger" th:href="@{'/delete/' + ${p.id}}">Удалить</a>
+                <a class="btn btn-danger" th:href="@{'/delete/' + ${p.id}}">РЈРґР°Р»РёС‚СЊ</a>
             </td>
         </tr>
         </tbody>
     </table>
-    <h2>Добавить продукт</h2>
+    <h2>Р”РѕР±Р°РІРёС‚СЊ РїСЂРѕРґСѓРєС‚</h2>
     <form method="POST" th:action="@{/add}">
         <input type="hidden" name="id" value="0">
-        <input type="text" name="title" placeholder="Наименование">
-        <input type="number" name="cost" placeholder="Цена">
-        <button class="btn btn-primary" type="submit">Добавить</button>
+        <input type="text" name="title" placeholder="РќР°РёРјРµРЅРѕРІР°РЅРёРµ">
+        <input type="number" name="cost" placeholder="Р¦РµРЅР°">
+        <button class="btn btn-primary" type="submit">Р”РѕР±Р°РІРёС‚СЊ</button>
+    </form>
+    <h2>РќР°Р№С‚Рё РїСЂРѕРґСѓРєС‚</h2>
+    <form method="GET" th:action="@{/get}">
+        <input type="text" name="id" placeholder="Id РїСЂРѕРґСѓРєС‚Р°">
+        <button class="btn btn-primary" type="submit">РќР°Р№С‚Рё</button>
     </form>
 </div>
 

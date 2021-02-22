@@ -1,6 +1,7 @@
 package ru.moore.lesson4.repositories;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CrudRepository<T> {
 
@@ -10,7 +11,7 @@ public interface CrudRepository<T> {
 
     void delete(int id);
 
-    T find(String title);
+    Optional<T> find(int id);
 
     List<T> findAll();
 }

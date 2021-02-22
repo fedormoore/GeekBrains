@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class ProductRepositoryImpl implements ProductRepository {
@@ -52,13 +53,13 @@ public class ProductRepositoryImpl implements ProductRepository {
     }
 
     @Override
-    public Product find(String title) {
+    public Optional<Product> find(int id) {
         for (Product product : products) {
-            if (product.getTitle().equals(title)) {
-                return product;
+            if (product.getId()==id) {
+                return Optional.of(product);
             }
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override

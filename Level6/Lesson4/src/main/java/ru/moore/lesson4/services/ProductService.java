@@ -6,6 +6,7 @@ import ru.moore.lesson4.models.Product;
 import ru.moore.lesson4.repositories.ProductRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class ProductService {
@@ -43,5 +44,9 @@ public class ProductService {
 
     public List<Product> findAllProduct() {
         return productRepository.findAll();
+    }
+
+    public Optional<Product> getProduct(int id) {
+        return productRepository.find(id);
     }
 }
