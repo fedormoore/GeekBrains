@@ -3,23 +3,34 @@ package ru.moore.lesson10.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+<<<<<<< HEAD
 import org.springframework.data.domain.Sort;
+=======
+import org.springframework.data.jpa.domain.Specification;
+>>>>>>> Level6Lesson10
 import org.springframework.stereotype.Service;
 import ru.moore.lesson10.exeptions.PageNotFoundException;
 import ru.moore.lesson10.model.dtos.ProductDto;
 import ru.moore.lesson10.model.entities.Product;
 import ru.moore.lesson10.repository.ProductRepository;
+<<<<<<< HEAD
 import ru.moore.lesson10.services.mappers.ProductMapper;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+=======
+import ru.moore.lesson10.services.mappers.MapperUtils;
+
+import java.util.Optional;
+>>>>>>> Level6Lesson10
 
 @Service
 public class ProductService {
 
     @Autowired
     ProductRepository productRepository;
+<<<<<<< HEAD
     @Autowired
     ProductMapper productMapper;
 
@@ -74,12 +85,40 @@ public class ProductService {
     private Product convertToEntity(ProductDto productDto) {
         Product product = productMapper.modelMapper().map(productDto, Product.class);
         return product;
+=======
+
+    @Autowired
+    MapperUtils mapperUtils;
+
+    public Optional<ProductDto> getProductById(Long id) {
+        return Optional.of(mapperUtils.map(productRepository.findById(id), ProductDto.class));
+    }
+
+    public Page<ProductDto> findAll(Specification<Product> spec, int page, int size) {
+        if (page < 0 || size <= 0) {
+            throw new PageNotFoundException("Неверный запрос");
+        }
+        //return checkTheEnd(productRepository.findAll(spec, PageRequest.of(page, size)).map(this::convertToDto));
+        return checkTheEnd((Page<ProductDto>) mapperUtils.map(productRepository.findAll(spec, PageRequest.of(page, size)), ProductDto.class));
+    }
+
+    private Page<ProductDto> checkTheEnd(Page<ProductDto> result) {
+        if (!result.hasContent()) {
+            throw new PageNotFoundException("Запрашиваемой страницы не существует");
+        }
+        return result;
+    }
+
+    public ProductDto saveNewProduct(ProductDto productDto) {
+        return mapperUtils.map(productRepository.save(mapperUtils.map(productDto, Product.class)), ProductDto.class);
+>>>>>>> Level6Lesson10
     }
 
     public void deleteProductById(Long id) {
         productRepository.deleteById(id);
     }
 
+<<<<<<< HEAD
     public List<ProductDto> findProductByTitle(String title) {
         return productRepository.findAllByTitleContainingIgnoreCase(title);
     }
@@ -99,4 +138,6 @@ public class ProductService {
 
 
 
+=======
+>>>>>>> Level6Lesson10
 }

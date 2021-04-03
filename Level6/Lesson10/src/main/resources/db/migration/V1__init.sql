@@ -1,4 +1,5 @@
 CREATE TABLE category (
+<<<<<<< HEAD
 id bigserial PRIMARY KEY,
 name VARCHAR(255),
 created_at timestamp default current_timestamp,
@@ -8,15 +9,29 @@ category_id bigserial
 );
 CREATE TABLE product (
 id bigserial PRIMARY KEY,
+=======
+id serial not null constraint category_pk primary key,
+name VARCHAR(255),
+created_at timestamp default current_timestamp,
+update_at timestamp default current_timestamp,
+deleted_at timestamp
+);
+CREATE TABLE product (
+id serial not null constraint product_pk primary key,
+>>>>>>> Level6Lesson10
 cost bigserial,
 title VARCHAR(255),
 created_at timestamp default current_timestamp,
 update_at timestamp default current_timestamp,
 deleted_at timestamp,
+<<<<<<< HEAD
 category_id bigserial
         REFERENCES category (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
+=======
+category_id serial
+>>>>>>> Level6Lesson10
 );
 INSERT INTO category (name) VALUES
 ('Мясо'),
@@ -41,4 +56,25 @@ INSERT INTO product (cost, title, category_id) VALUES
 (90, 'Молоко', 2),
 (95, 'Сметана', 2),
 (100, 'Мясо', 2),
+<<<<<<< HEAD
 (105, 'Сыр', 2);
+=======
+(105, 'Сыр', 2);
+
+create table role(
+id serial not null constraint role_pk primary key,
+name varchar(20) not null
+);
+
+create table users(
+id serial not null constraint user_pk primary key,
+login varchar(50),
+password varchar(500),
+role_id integer constraint users_role_id_fk references role
+);
+
+create unique index users_login_uindex on users (login);
+
+insert into role(name) values ('ROLE_ADMIN');
+insert into role(name) values ('ROLE_USER');
+>>>>>>> Level6Lesson10
