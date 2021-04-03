@@ -22,6 +22,7 @@ public class AuthController {
     @Autowired
     private JwtProvider jwtProvider;
 
+    //http://localhost:8080/api/v1/user/register
     @PostMapping("/register")
     public String registerUser(@RequestBody SignUpRequestDto signUpRequest) {
         User user = new User();

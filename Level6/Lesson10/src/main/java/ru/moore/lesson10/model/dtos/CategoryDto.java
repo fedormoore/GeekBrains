@@ -11,8 +11,4 @@ public class CategoryDto {
     private Long id;
     private String name;
 
-    public CategoryDto(Category p) {
-        this.id = p.getId();
-        this.name = p.getName();
-    }
 }
