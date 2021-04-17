@@ -8,6 +8,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "product")
@@ -22,10 +23,13 @@ public class Product {
     private Long id;
 
     @Column(name = "cost")
-    private Integer cost;
+    private int cost;
 
-    @Column(name = "title")
+    @Column(name = "name")
     private String title;
+
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "image")
     private String image;
@@ -44,4 +48,13 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
+    @OneToMany(mappedBy = "product")
+    List<ProductComment> productComments;
+
+    @OneToMany(mappedBy = "product")
+    List<Promo> promos;
+
+    @OneToMany(mappedBy = "product")
+    List<Cart> carts;
 }

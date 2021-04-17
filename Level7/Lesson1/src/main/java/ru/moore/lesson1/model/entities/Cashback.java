@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "cashback")
@@ -18,9 +19,12 @@ public class Cashback {
     private Long id;
 
     @Column
+    private Date date;
+
+    @Column
     private int sum;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 

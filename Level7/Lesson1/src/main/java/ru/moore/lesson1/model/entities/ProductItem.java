@@ -26,6 +26,6 @@ public class ProductItem {
             name = "product_item_storage",
             joinColumns = @JoinColumn(name = "product_item_id"),
             inverseJoinColumns = @JoinColumn(name = "storage_id"))
-    private List<Storage> storage;
+    private List<Storage> storages;
 
 }

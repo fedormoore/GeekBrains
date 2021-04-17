@@ -18,9 +18,11 @@ public class Storage {
     private Long id;
 
     @Column
-    private String title;
+    private String Name;
 
     @Column
     private String location;
+
+
 
 }

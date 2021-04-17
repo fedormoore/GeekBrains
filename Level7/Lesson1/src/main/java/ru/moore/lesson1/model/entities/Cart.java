@@ -8,6 +8,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "cart")
@@ -39,4 +40,7 @@ public class Cart {
     @OneToOne
     @JoinColumn(name="product_id")
     private Product product;
+
+    @OneToMany (mappedBy = "cart")
+    private List<OrderStatus> orderStatuses;
 }
