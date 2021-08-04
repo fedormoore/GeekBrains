@@ -10,14 +10,22 @@
     </parent>
 
     <groupId>ru.moore</groupId>
-    <artifactId>routing-lib</artifactId>
+    <artifactId>ms-order</artifactId>
     <version>0.0.1</version>
-    <name>routing-lib</name>
+    <name>ms-order</name>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>ru.moore</groupId>
+            <artifactId>core-lib</artifactId>
+            <version>0.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>ru.moore</groupId>
+            <artifactId>routing-lib</artifactId>
+            <version>0.0.1</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

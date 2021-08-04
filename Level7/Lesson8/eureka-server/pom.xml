@@ -10,14 +10,18 @@
     </parent>
 
     <groupId>ru.moore</groupId>
-    <artifactId>routing-lib</artifactId>
+    <artifactId>eureka-server</artifactId>
     <version>0.0.1</version>
-    <name>routing-lib</name>
+    <name>eureka-server</name>
+
+    <properties>
+        <java.version>11</java.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
 
