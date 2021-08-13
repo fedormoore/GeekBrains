@@ -1,0 +1,152 @@
+Структурные паттерны
+1. Адаптер (Adapter) - объект, обеспечивающий взаимодействие двух других объектов, один из которых использует, а другой предоставляет несовместимый с первым интерфейс.
+
+2. Компоновщик (Composite) - объект, который объединяет в себе объекты, подобные ему самому.
+
+3. Декоратор или Обёртка (Decorator) - класс, расширяющий функциональность другого класса без использования наследования.
+Фасад (Facade) - объект, который абстрагирует работу с несколькими классами, объединяя их в единое целое.
+
+4. Заместитель (Proxy) - объект, который является посредником между двумя другими объектами, и который реализует/ограничивает доступ к объекту, к которому обращаются через него.
+
+1. Адаптер
+
+import java.util.*;
+class Main {
+  public static void main(String[] arguments) {
+    String[] array = {"One", "Two", "Three"};
+    List<String> strings = Arrays.asList(array);
+    strings.set(0, "1");
+    System.out.println(Arrays.toString(array));
+  }
+}
+
+2. Компоновщик
+
+interface Car {
+    void draw(String color);
+}
+
+class SportCar implements Car {
+    public void draw(String color) {
+        System.out.println("SportCar color: " + color);
+    }
+}
+
+class UnknownCar implements Car {
+    public void draw(String color) {
+        System.out.println("UnknownCar color: " + color);
+    }
+}
+
+class Drawing implements Car {
+
+    private List<Car> cars = new ArrayList<Car>();
+
+    public void draw(String color) {
+        for(Car car : cars) {
+            car.draw(color);
+        }
+    }
+
+    public void add(Car s){
+        this.cars.add(s);
+    }
+
+    public void clear(){
+		System.out.println();
+        this.cars.clear();
+    }
+}
+
+public class CompositeTest {//тест
+    public static void main(String[] args) {
+        Car sportCar = new SportCar();
+        Car unknownCar = new UnknownCar();
+        Drawing drawing = new Drawing();
+        drawing.add(sportCar);
+        drawing.add(unknownCar);
+        drawing.draw("green");
+        drawing.clear();
+        drawing.add(sportCar);
+        drawing.add(unknownCar);
+        drawing.draw("white");
+    }
+}
+
+3. Декоратор
+
+ public interface DataSource {
+    void writeData(String data);
+
+    String readData();
+}
+
+public class FileDataSource implements DataSource {
+    private String name;
+
+    public FileDataSource(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void writeData(String data) {
+        File file = new File(name);
+        try (OutputStream fos = new FileOutputStream(file)) {
+            fos.write(data.getBytes(), 0, data.length());
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Override
+    public String readData() {
+        char[] buffer = null;
+        File file = new File(name);
+        try (FileReader reader = new FileReader(file)) {
+            buffer = new char[(int) file.length()];
+            reader.read(buffer);
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return new String(buffer);
+    }
+}
+
+public class DataSourceDecorator implements DataSource {
+    private DataSource wrappee;
+
+    DataSourceDecorator(DataSource source) {
+        this.wrappee = source;
+    }
+
+    @Override
+    public void writeData(String data) {
+        wrappee.writeData(data);
+    }
+
+    @Override
+    public String readData() {
+        return wrappee.readData();
+    }
+}
+
+4. Заместитель
+
+import java.util.*;
+import java.lang.reflect.*;
+class Main {
+  public static void main(String[] arguments) {
+    final Map<String, String> original = new HashMap<>();
+    InvocationHandler proxy = (obj, method, args) -> {
+      System.out.println("Invoked: " + method.getName());
+      return method.invoke(original, args);
+    };
+    Map<String, String> proxyInstance = (Map) Proxy.newProxyInstance(
+        original.getClass().getClassLoader(),
+        original.getClass().getInterfaces(),
+        proxy);
+    proxyInstance.put("key", "value");
+    System.out.println(proxyInstance.get("key"));
+  }
+}
+
